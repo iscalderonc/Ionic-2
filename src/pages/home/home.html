@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Insurance App!
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page" padding>
+    <h3>What would you like to do ? </h3>
+<!--
+    <ion-list no-lines>
+
+        <ion-item *ngFor="let p of pages">
+            <button ion-button (click)="openPage(p.component)" large item-center>
+                <ion-icon name="{{p.icon}}" large></ion-icon>
+            </button>
+        </ion-item>
+    </ion-list>
+-->
+    <ion-card *ngFor="let p of pages">
+        <div align="center">
+            <img src="{{p.image}}" (click)="openPage(p.component)" />
+        </div>
+        <!--
+            <div class="card-title">São Paulo</div>
+            <div class="card-subtitle">41 Listings</div>
+        -->
+    </ion-card>
+
+
+</ion-content>
